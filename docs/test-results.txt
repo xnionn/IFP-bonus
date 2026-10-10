@@ -1,0 +1,29 @@
+PASS Card and percent commission
+PASS Card and flat commission
+PASS Transfer and percent commission
+PASS Transfer and flat commission
+PASS Sequential deposits preserve snapshots
+PASS Records compare by values with ==
+PASS Exact card limit is accepted
+PASS Above card limit is rejected
+PASS Exact transfer minimum is accepted
+PASS Below transfer minimum is rejected
+PASS Zero deposit is rejected
+PASS Negative deposit is rejected
+PASS Null channel is rejected
+PASS Null policy is rejected
+PASS Task 3 rejects fee exceeding deposit
+PASS Negative commission is rejected
+PASS Commission equal to deposit gives zero net credit
+PASS Zero commission credits the whole deposit
+PASS Channel limits are caller-defined
+PASS Invalid channel configuration is rejected
+PASS Invalid starting state is rejected
+PASS Rejected channel does not execute policy
+PASS Successful deposit executes policy once
+PASS Policy failure leaves starting balance unchanged
+PASS Decimal retains fractional commission
+PASS Balance overflow is rejected without mutation
+PASS Net calculation avoids unnecessary intermediate overflow
+
+27/27 tests passed.

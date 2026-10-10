@@ -1,0 +1,24 @@
+IFP bonus task - Alimzhan Almukhambetov - IT-2510
+
+Task 1 - Caller-defined channel limits
+Card: 0 < amount <= 500; bank transfer: amount >= 100.
+
+Task 2 - Both channels with both commission policies
+Card / 2 percent: before=1000.00, deposit=200.00, fee=4.00, after=1196.00
+Card / flat 5: before=1000.00, deposit=200.00, fee=5.00, after=1195.00
+Transfer / 2 percent: before=1000.00, deposit=200.00, fee=4.00, after=1196.00
+Transfer / flat 5: before=1000.00, deposit=200.00, fee=5.00, after=1195.00
+
+Task 2 - Two deposits in a row
+First deposit: before=1000.00, deposit=200.00, fee=4.00, after=1196.00
+Second deposit: before=1196.00, deposit=300.00, fee=5.00, after=1491.00
+Saved snapshots: start=1000.00, first=1196.00, second=1491.00
+Start unchanged: True
+First unchanged after second deposit: True
+afterSecond == new PaymentBalance(same values): True
+ReferenceEquals(afterSecond, sameValues): False
+
+Task 3 - Deposit 3 with a flat commission of 5
+Original formula: 1000 + 3 - 5 = 998.00; original start=1000.00
+Fixed Deposit rejected: ArgumentOutOfRangeException (commission)
+Balance after rejected deposit: 1000.00
